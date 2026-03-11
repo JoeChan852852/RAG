@@ -1,0 +1,13 @@
+"MECH","https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1697169/full","MechRAG: a multimodal large language model for mechanical engineering"
+"MECH","https://arxiv.org/html/2508.04714v2","Prescriptive Agents based on RAG for Automated Maintenance (PARAM)"
+"CIVL","https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5172919","Chatcivic: A Domain-Specific Large Language Model (Llm) for Design Code Interpretation"
+"CIVL","https://ieeexplore.ieee.org/document/10762118","Automated Smart City Planning through Personalized Large Language Model with Retrieval Augmented Generation"
+"CIVL","https://arxiv.org/pdf/2409.00494","GenAI-powered Multi-Agent Paradigm for Smart Urban Mobility: Opportunities and Challenges for Integrating Large Language Models (LLMs) and
+Retrieval-Augmented Generation (RAG) with Intelligent Transportation Systems"
+"EEE","https://developer.ibm.com/articles/agentic-rag-pipeline/","Building an agentic RAG pipeline"
+"EEE","https://arxiv.org/html/2508.12682v1","GridCodex: A RAG-Driven AI Framework for Power Grid Code Reasoning and Compliance"
+"DASE","https://www.sciencedirect.com/science/article/pii/S147403462400658X","An advanced retrieval-augmented generation system for manufacturing quality control"
+"MECH","https://www.mdpi.com/2079-9292/14/16/3314","A Retrieval-Augmented Generation Method for Question Answering on Airworthiness Regulations"
+"CIVL","https://www.sciencedirect.com/science/article/abs/pii/S1474034625000515?via%3Dihub","Retrieval augmented generation-driven information retrieval and question answering in construction management"
+"MED","https://www.mdpi.com/2076-3417/14/20/9318","Applications and Challenges of Retrieval-Augmented Generation (RAG) in Maternal Health"
+
