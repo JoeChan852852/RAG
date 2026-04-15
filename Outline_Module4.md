@@ -61,7 +61,7 @@ This introductory class removes the intimidation factor of working with code by 
     3.  *Full RAG Pipeline:* Using a localized vector search to extract only relevant chunks to feed the LLM.
 
 ```mermaid
-flowchart LR
+flowchart TD
     %% Phase 1 - Raw LLM (leftmost)
     subgraph phase1 [Phase 1: Raw LLM]
         A1[User Query] --> A2((LLM))
@@ -119,26 +119,51 @@ By experiencing the failures of raw LLMs and prompt stuffing firsthand, students
 * **Vector Search Demo:** Storing image metadata in a Vector Database, calculating embeddings, and retrieving the exact correct photo simply by typing a descriptive text query.
 
 ```mermaid
-graph TD
-    subgraph 1. Data Ingestion & Embedding
-        I1[🖼️ Image Dataset] --> I2[🤖 VLM Auto-Captioning]
-        I2 --> I3[📝 Text Metadata]
-        I1 -.-> I4
-        I3 --> I4((CLIP Model))
-        I4 --> I5[(Vector Database)]
+flowchart TD
+    %% Define professional styling and colors
+    classDef dataset fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#000
+    classDef model fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef metadata fill:#e0f7fa,stroke:#006064,stroke-width:2px,color:#000
+    classDef database fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
+    classDef query fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    classDef output fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+
+    %% Phase 1 Subgraph
+    subgraph Phase1 ["Phase 1: Indexing / Data Preparation"]
+        direction TB
+        ID[/"Large Image Dataset"/]:::dataset
+        VLM{{"Vision-Language Model (VLM)"}}:::model
+        CAP["Text Metadata (Captions)"]:::metadata
+        EMB1{{"Vector Embedding Model"}}:::model
+        
+        ID -->|Feeds raw images for processing| VLM
+        VLM -->|Automatically generates descriptive text| CAP
+        CAP -->|Passes text captions for vectorization| EMB1
     end
 
-    subgraph 2. Multimodal Retrieval
-        Q1[🔍 User Text Query] --> Q2((CLIP Model))
-        Q2 --> Q3[📐 Query Vector]
-        I5 -.-> Q4
-        Q3 --> Q4{Cosine Similarity Math}
-        Q4 --> Q5[🎯 Retrieve Highest Match Photo]
+    %% Central Database
+    VDB[("Vector Database")]:::database
+
+    %% Phase 2 Subgraph
+    subgraph Phase2 ["Phase 2: Query / Retrieval"]
+        direction TB
+        UQ[/"User Text Query"/]:::query
+        EMB2{{"Vector Embedding Model"}}:::model
+        
+        UQ -->|Converts search text into vectors| EMB2
     end
-    
-    style I4 fill:#ede7f6,stroke:#4527a0,stroke-width:2px
-    style Q2 fill:#ede7f6,stroke:#4527a0,stroke-width:2px
-    style I5 fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+
+    %% Final Output
+    OUT[/"Most Relevant Matching Photos (Original Images)"/]:::output
+
+    %% Cross-Phase Connections
+    EMB1 -->|Stores embeddings + original image references| VDB
+    EMB2 -->|Sends query vector for lookup| VDB
+    VDB -->|Performs similarity search & retrieves matches| OUT
+
+    %% Subgraph Styling
+    style Phase1 fill:#fafbfc,stroke:#1565c0,stroke-width:2px,stroke-dasharray: 5 5
+    style Phase2 fill:#fcfdfa,stroke:#2e7d32,stroke-width:2px,stroke-dasharray: 5 5
 ```
 
 **How This Class Helps Students:**
