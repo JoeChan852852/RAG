@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Master the Engineer’s Skim Path with AI</title>
+
+  <!-- Mermaid (ESM) -->
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "default",
+      securityLevel: "loose",
+      htmlLabels: true
+    });
+  </script>
+</head>
+
+<body>
+
+<div style="font-family:Georgia;background-color:#FFFFFF;color:#2E2E2E;padding:18px;">
+
+  <h1 style="color:#1A2A44;font-family:Georgia;letter-spacing:1px;">
+    Master the Engineer’s Skim Path with AI
+  </h1>
+
+  <hr style="border:1.5px solid #C9A646;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Tutorial Session Overview
+  </h2>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    This tutorial guides second-year engineering students from the chaotic “wild west” of raw AI prompting toward a disciplined, engineer-like reading workflow using <strong>The Three-Pass Method</strong>. Students first experience the limitations of unstructured AI use, then learn how to design prompts that mirror systematic technical reading.
+  </p>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #C9A646;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#1A2A44;">Royal Insight:</strong><br>
+    AI becomes powerful only when it follows a clear intellectual structure. The method comes first; the machine comes second.
+  </div>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #1A2A44;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#5A1F1F;">💡 Reminder:</strong><br>
+    <span style="color:#2E2E2E;font-size:16px;line-height:1.7;">
+      Students should not treat an LLM as a magic summarization button. They must guide it through deliberate reading passes.
+    </span>
+  </div>
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Target Audience and Platform
+  </h2>
+
+  <ul style="color:#2E2E2E;font-family:Georgia;font-size:16px;line-height:1.7;">
+    <li><strong>Target Audience:</strong> Second-year engineering students</li>
+    <li><strong>Learning Context:</strong> AI-assisted engineering literature review</li>
+    <li><strong>Platform Focus:</strong> HKU Ed Discussion and students’ chosen LLM tools, such as ChatGPT, Claude, Gemini, or Copilot</li>
+    <li><strong>Core Method:</strong> Keshav’s Three-Pass Method for reading technical papers</li>
+  </ul>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Course Learning Outcomes Alignment
+  </h2>
+
+  <table style="width:100%;border-collapse:collapse;font-family:Georgia;font-size:16px;color:#2E2E2E;margin:16px 0;">
+    <thead>
+      <tr style="background-color:#FDFBF6;color:#1A2A44;">
+        <th style="border:1px solid #C9A646;padding:10px;text-align:left;">Course Learning Outcome</th>
+        <th style="border:1px solid #C9A646;padding:10px;text-align:left;">Tutorial Integration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #E3D8B5;padding:10px;"><strong>CLO 1:</strong> Utilize modern AI tools to analyze data, solve problems, and support coding.</td>
+        <td style="border:1px solid #E3D8B5;padding:10px;">Students use LLMs to filter, compare, and extract core findings from a 10-paper engineering dataset.</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #E3D8B5;padding:10px;"><strong>CLO 2:</strong> Apply core AI technologies to solve introductory engineering problems.</td>
+        <td style="border:1px solid #E3D8B5;padding:10px;">Students design structured prompts that act as cognitive frameworks for literature triage.</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #E3D8B5;padding:10px;"><strong>CLO 3:</strong> Evaluate capabilities, limitations, and ethical risks of AI.</td>
+        <td style="border:1px solid #E3D8B5;padding:10px;">Students identify hallucinations, missing nuances, contradictions, and overconfident AI summaries.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #C9A646;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#1A2A44;">Royal Insight:</strong><br>
+    The session is not merely about using AI faster; it is about using AI with engineering judgment.
+  </div>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Session Flowchart
+  </h2>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    The following Mermaid flowchart shows the learning journey from unstructured prompting to disciplined AI-assisted technical reading.
+  </p>
+
+  <!-- Mermaid chart #1 -->
+  <pre class="mermaid" style="background-color:#FDFBF6;padding:16px;border-left:4px solid #C9A646;border-radius:6px;font-family:Georgia;color:#2E2E2E;line-height:1.5;">
+flowchart TD
+    %% === NODES ===
+    A(["10 Engineering Papers"]):::royalStart --> B(["Phase I: The Wild West Literature Challenge"]):::phase
+
+    B --> C(["Students employ independent reading or AI methods"]):::process
+    C --> D(["Submit initial findings to HKU Ed Discussion"]):::process
+    D --> E(["Peer Review: Examine and contrast varied interpretations"]):::review
+
+    E --> F(["Phase II: Guided Intervention"]):::phase
+    F --> G(["Introduction to the Three-Pass Method"]):::highlight
+
+    G --> H(["Pass I: Grand Scholarly Overview"]):::pass
+    H --> H1(["Survey: Title, Abstract, Introduction, Headings, Conclusion, References"]):::detail
+    H1 --> H2(["Apply the Five Cs:&lt;br/&gt;Category · Context · Contributions · Correctness · Clarity"]):::detail
+    H2 --> H3{"Proceed to Pass II?"}:::decision
+
+    H3 -- "No" --> X(["Disregard Irrelevant Works"]):::reject
+    H3 -- "Yes" --> I(["Pass II: Comprehension of Core Concepts"]):::pass
+
+    I --> I1(["Examine figures, diagrams, architecture, and results"]):::detail
+    I1 --> I2(["Articulate understanding to a peer"]):::detail
+    I2 --> J(["Pass III: Rigorous Intellectual Examination"]):::pass
+
+    J --> J1(["Reconstruct arguments and methodologies mentally"]):::detail
+    J1 --> J2(["Critically challenge assumptions and detect limitations"]):::detail
+
+    J2 --> K(["Phase III: Prompt Engineering the Skimming Process"]):::phase
+    K --> L(["Leverage AI for Pass I triage"]):::process
+    L --> M(["Identify the three most pertinent papers"]):::highlight
+    M --> N(["Use AI for comparative analysis and contradiction detection"]):::process
+
+    N --> O(["Phase IV: Reflection &amp; Discourse"]):::phase
+    O --> P(["Re-submit structured insights to HKU Ed Discussion"]):::process
+    P --> Q(["Deliberate on AI limitations, hallucinations, and human judgement"]):::review
+    Q --> R(["Final Principle: Structure Precedes Automation"]):::royalEnd
+
+    %% === STYLING ===
+    classDef royalStart fill:#1b2a41,stroke:#0d1b2a,color:#f8f5f0,stroke-width:2px,font-weight:bold
+    classDef royalEnd fill:#4a0e1a,stroke:#2b0a12,color:#fefcf9,stroke-width:2px,font-weight:bold
+
+    classDef phase fill:#3f2f56,stroke:#2a1f3d,color:#f3f0ea,stroke-width:2px
+    classDef process fill:#e8dcc7,stroke:#bfa980,color:#2b2b2b,stroke-width:1.5px
+    classDef pass fill:#6c8a9e,stroke:#435c6b,color:#ffffff,stroke-width:1.5px
+    classDef detail fill:#f4efe6,stroke:#c9b79c,color:#333,stroke-width:1px
+    classDef review fill:#d6c3a3,stroke:#a68a64,color:#2b2b2b,stroke-width:1.5px
+    classDef highlight fill:#b89b72,stroke:#8c7352,color:#1a1a1a,stroke-width:1.5px,font-weight:bold
+    classDef decision fill:#2f4b7c,stroke:#1c2f4a,color:#ffffff,stroke-width:2px
+    classDef reject fill:#8b3a3a,stroke:#5c2525,color:#fff5f5,stroke-width:1.5px
+  </pre>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Phase 1: The “Wild West” Literature Challenge
+  </h2>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    In the opening challenge, students receive a zip folder containing <strong>10 simple engineering papers</strong>. Three papers share a deeply interconnected core topic, while the remaining seven appear superficially similar through shared buzzwords such as <em>neural networks</em>, <em>sustainable concrete</em>, <em>optimization</em>, or <em>smart systems</em>, but are fundamentally unrelated.
+  </p>
+
+  <h3 style="color:#1A2A44;font-family:Georgia;">
+    Student Task
+  </h3>
+
+  <ul style="color:#2E2E2E;font-family:Georgia;font-size:16px;line-height:1.7;">
+    <li>Use any method: manual reading, raw LLM prompting, copy-paste summarization, keyword searching, or personal judgment.</li>
+    <li>Identify the 3 closely related papers.</li>
+    <li>Pinpoint their core thematic connection.</li>
+    <li>Write a brief comparative summary.</li>
+    <li>Flag outright contradictions between the papers.</li>
+    <li>Upload findings to the HKU Ed Discussion board.</li>
+    <li>Spend 10 minutes reviewing peers’ posts.</li>
+  </ul>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #1A2A44;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#5A1F1F;">💡 Tutor Note:</strong><br>
+    <span style="color:#2E2E2E;font-size:16px;line-height:1.7;">
+      Expect confusion. Students who paste entire PDFs into an LLM may encounter context-window truncation, invented relationships, or over-smoothed summaries that ignore real contradictions.
+    </span>
+  </div>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Phase 2: The Intervention — The Three-Pass Method
+  </h2>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    Students are then taught to read like engineers: quickly, structurally, and purposefully. The Three-Pass Method replaces uncontrolled reading with staged evaluation.
+  </p>
+
+  <!-- Mermaid chart #2 -->
+  <pre class="mermaid" style="background-color:#FDFBF6;padding:16px;border-left:4px solid #1A2A44;border-radius:6px;font-family:Georgia;color:#2E2E2E;line-height:1.5;">
+flowchart TB
+    A(["📜 Corpus: 10 Engineering Papers"]):::royalStart
+        --> B(["Pass I: The Grand Overview"]):::pass
+
+    B --> B1(["Survey Title · Abstract · Structure · Conclusions"]):::detail
+    B1 --> C{"Scholarly Relevance?"}:::decision
+
+    C -- "No" --> D(["Respectfully Discard"]):::reject
+    C -- "Yes" --> E(["Pass II: Understanding the Core"]):::pass
+
+    E --> E1(["Examine system design, methods, figures, and results"]):::detail
+    E1 --> F(["Articulate the work clearly (peer explanation)"]):::process
+
+    F --> G(["Pass III: The Deep Examination"]):::pass
+    G --> G1(["Reconstruct logic and methodology mentally"]):::detail
+    G1 --> H(["Critique assumptions &amp; identify contradictions"]):::process
+
+    H --> I(["🎓 Outcome: Deep Insight &amp; Critical Mastery"]):::royalEnd
+
+    %% === STYLING ===
+    classDef royalStart fill:#1f2f46,stroke:#0e1a2b,color:#f5f2eb,stroke-width:2px,font-weight:bold
+    classDef royalEnd fill:#4b1d2a,stroke:#2a0f17,color:#fffaf5,stroke-width:2px,font-weight:bold
+
+    classDef pass fill:#5a7684,stroke:#3c525c,color:#ffffff,stroke-width:1.8px
+    classDef process fill:#e6dcc9,stroke:#b9a889,color:#2b2b2b,stroke-width:1.4px
+    classDef detail fill:#f3ede3,stroke:#cbbca3,color:#333,stroke-width:1px
+    classDef decision fill:#2e4a73,stroke:#1c2f4a,color:#ffffff,stroke-width:2px
+    classDef reject fill:#8c3b3b,stroke:#5e2525,color:#fff6f6,stroke-width:1.4px
+  </pre>
+
+  <h3 style="color:#1A2A44;font-family:Georgia;">
+    Pass I: The Grand Overview
+  </h3>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    Students do not read the full paper. They inspect only the <strong>title, abstract, introduction, section headings, conclusion, and references</strong>. Their goal is to answer the Five Cs.
+  </p>
+
+  <ul style="color:#2E2E2E;font-family:Georgia;font-size:16px;line-height:1.7;">
+    <li><strong>Category:</strong> What type of engineering work is this? Experimental, theoretical, computational, review, or case study?</li>
+    <li><strong>Context:</strong> What prior research surrounds the paper?</li>
+    <li><strong>Contributions:</strong> What are the central ideas, methods, systems, or claims?</li>
+    <li><strong>Correctness:</strong> Are the baseline assumptions reasonable?</li>
+    <li><strong>Clarity:</strong> Is the paper well-articulated and structurally coherent?</li>
+  </ul>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #C9A646;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#1A2A44;">Royal Insight:</strong><br>
+    Pass I is an intellectual filter. Its purpose is not comprehension; its purpose is selection.
+  </div>
+
+  <h3 style="color:#1A2A44;font-family:Georgia;">
+    Pass II: Understanding the Core
+  </h3>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    Students read more attentively but skip heavy mathematics, long proofs, and minor technical details. Their attention should be directed toward <strong>figures, diagrams, flowcharts, tables, and results</strong>.
+  </p>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #1A2A44;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#5A1F1F;">💡 Reminder:</strong><br>
+    <span style="color:#2E2E2E;font-size:16px;line-height:1.7;">
+      After Pass II, a student should be able to explain the paper’s core system architecture to a classmate without reading from the paper.
+    </span>
+  </div>
+
+  <h3 style="color:#1A2A44;font-family:Georgia;">
+    Pass III: The Deep Examination
+  </h3>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    Only the most relevant papers receive a deep examination. Students reconstruct the work mentally, challenge assumptions, identify missing controls, and ask where the method may fail under real engineering conditions.
+  </p>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Phase 3: Prompt Engineering the Skim Path
+  </h2>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    Students now convert the Three-Pass Method into an AI prompting framework. The key lesson is that the LLM should not decide the reading strategy. The student designs the strategy, and the LLM executes bounded analytical tasks.
+  </p>
+
+  <h3 style="color:#1A2A44;font-family:Georgia;">
+    Prompt for Pass I: The Triage
+  </h3>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    Students paste only the title, abstract, and conclusion into the LLM. This prevents overloading the model and forces the analysis to remain focused on first-pass evaluation.
+  </p>
+
+  <pre style="background-color:#F8F6F1;padding:14px;border-left:4px solid #C9A646;border-radius:6px;font-family:Consolas,monospace;font-size:14px;color:#2E2E2E;white-space:pre-wrap;line-height:1.6;">
+[System Prompt]
+You are an expert engineering research assistant helping a second-year student triage papers using Keshav's Three-Pass Method.
+
+[User Prompt]
+Analyze the attached title, abstract, and conclusion.
+
+Provide a concise evaluation based on the Five Cs:
+1. Category
+2. Context
+3. Contributions
+4. Correctness: Are initial assumptions standard?
+5. Clarity
+
+Conclude with a one-sentence recommendation:
+Does this paper merit a deeper Pass II reading regarding [Insert Target Topic]?
+  </pre>
+
+  <h3 style="color:#1A2A44;font-family:Georgia;">
+    Prompt for Pass II: Contradiction Detection
+  </h3>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    After students isolate the three truly related papers, they provide the full text of only those papers to the LLM. The task now shifts from broad triage to focused comparison.
+  </p>
+
+  <pre style="background-color:#F8F6F1;padding:14px;border-left:4px solid #1A2A44;border-radius:6px;font-family:Consolas,monospace;font-size:14px;color:#2E2E2E;white-space:pre-wrap;line-height:1.6;">
+[User Prompt]
+I have confirmed these 3 papers are highly related.
+
+I want to look for data contradictions or methodology deviations.
+
+Compare their results sections and figures. Generate a Markdown table contrasting:
+- Core System Architecture
+- Testing Methodology
+- Primary Metric or Result
+- Conflicting Claims
+
+Highlight cases where Paper A claims X while Paper B claims Y.
+Do not invent contradictions. If evidence is unclear, mark it as "Requires human verification."
+  </pre>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #C9A646;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#1A2A44;">Royal Insight:</strong><br>
+    A strong prompt does not ask the AI to think vaguely. It assigns a role, limits the evidence, defines the comparison, and demands uncertainty labels.
+  </div>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Phase 4: Post-Method Reflection and Class Discussion
+  </h2>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.7;">
+    Students revisit the original 10-paper set using the structured AI-assisted Three-Pass Method. They update their findings and post a clean comparison table to the HKU Ed Discussion thread.
+  </p>
+
+  <h3 style="color:#1A2A44;font-family:Georgia;">
+    Discussion Questions
+  </h3>
+
+  <ul style="color:#2E2E2E;font-family:Georgia;font-size:16px;line-height:1.7;">
+    <li>How did your Phase 1 blind prompting results differ from your Phase 3 Three-Pass prompting results?</li>
+    <li>Where did the LLM try to smooth over a contradiction that actually required human engineering judgment?</li>
+    <li>Which papers looked similar at first but became clearly unrelated after Pass I?</li>
+    <li>Which details could the LLM extract effectively, and which required human verification?</li>
+  </ul>
+
+  <div style="background-color:#FDFBF6;padding:12px;border-left:4px solid #1A2A44;border-radius:6px;font-family:Georgia;margin:14px 0;">
+    <strong style="color:#5A1F1F;">💡 Reminder:</strong><br>
+    <span style="color:#2E2E2E;font-size:16px;line-height:1.7;">
+      The goal of reflection is not to prove that AI is useless or perfect. The goal is to understand where AI is useful, where it fails, and where engineering judgment must intervene.
+    </span>
+  </div>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Assessment Evidence
+  </h2>
+
+  <ul style="color:#2E2E2E;font-family:Georgia;font-size:16px;line-height:1.7;">
+    <li><strong>Initial HKU Ed Post:</strong> Demonstrates how students approach literature without structure.</li>
+    <li><strong>Peer Review Notes:</strong> Reveals variation and inconsistency in unstructured AI use.</li>
+    <li><strong>Structured Comparison Table:</strong> Shows ability to apply the Three-Pass Method through AI prompts.</li>
+    <li><strong>Reflection Response:</strong> Evaluates student understanding of AI limitations, hallucinations, and human oversight.</li>
+  </ul>
+
+  <hr style="border:1px solid #E3D8B5;">
+
+  <h2 style="color:#5A1F1F;font-family:Georgia;">
+    Final Takeaway
+  </h2>
+
+  <p style="color:#2E2E2E;font-family:Georgia;font-size:17px;line-height:1.8;">
+    AI will not replace a student’s ability to read engineering literature. Instead, it amplifies the student’s reading strategy. If students feed an LLM a chaotic strategy, they receive chaotic analysis. If they first master the Three-Pass Method and then program the AI to follow that discipline, they gain speed, structure, and sharper critical judgment.
+  </p>
+
+  <div style="background-color:#FDFBF6;padding:14px;border-left:5px solid #C9A646;border-radius:6px;font-family:Georgia;margin:16px 0;">
+    <strong style="color:#1A2A44;">The Engineer’s Principle:</strong><br>
+    Structure first. Automation second. Judgment always.
+  </div>
+
+</div>
+
+</body>
+</html>
